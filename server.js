@@ -1,7 +1,12 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 
+// Tell Express where to find the views folder inside 'src'
+app.set('views', path.join(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
+
+// Serve static files from a 'public' folder
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
