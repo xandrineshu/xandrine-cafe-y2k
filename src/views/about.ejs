@@ -4,155 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matcha Latte • About Xandrine</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@500;700&display=swap"
-        rel="stylesheet">
-    <style>
-        :root {
-            --bg-pink: #ffe6f0;
-            --pastel-lavender: #e6e6fa;
-            --mint-green: #e0f8f0;
-            --hot-pink: #ff66b2;
-            --deep-purple: #663399;
-            --white: #ffffff;
-        }
-
-        body {
-            background-color: var(--bg-pink);
-            background-image: radial-gradient(var(--hot-pink) 15%, transparent 16%), radial-gradient(var(--pastel-lavender) 15%, transparent 16%);
-            background-size: 60px 60px;
-            background-position: 0 0, 30px 30px;
-            font-family: 'Quicksand', sans-serif;
-            color: #4a3b5c;
-            margin: 0;
-            padding: 0;
-            cursor: url('https://cur.cursors-4u.net/holidays/hol-1/hol14.cur'), auto;
-        }
-
-        header {
-            text-align: center;
-            padding: 40px 20px 20px;
-        }
-
-        h1 {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 22px;
-            color: var(--hot-pink);
-            text-shadow: 2px 2px var(--deep-purple);
-        }
-
-        .cafe-menu {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 15px;
-            border-bottom: 4px dashed var(--hot-pink);
-            box-shadow: 0 4px 15px rgba(255, 102, 178, 0.2);
-        }
-
-        .cafe-menu a {
-            text-decoration: none;
-            background: var(--pastel-lavender);
-            color: var(--deep-purple);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: bold;
-            border: 2px solid var(--hot-pink);
-            transition: all 0.3s ease;
-        }
-
-        .cafe-menu a:hover {
-            background: var(--hot-pink);
-            color: var(--white);
-            transform: scale(1.05);
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: rgba(255, 255, 255, 0.95);
-            border: 4px solid var(--hot-pink);
-            border-radius: 25px;
-            padding: 30px;
-            box-shadow: 8px 8px 0px var(--mint-green);
-        }
-
-        .bio-box {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .bio-text {
-            flex: 1;
-        }
-
-        .badge-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-
-        .badge-list li {
-            background: var(--mint-green);
-            border: 2px dashed var(--hot-pink);
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 12px;
-            font-family: 'Press Start 2P', cursive;
-            color: var(--deep-purple);
-        }
-    </style>
+    <title>About Me // Xandrine's Y2K Café</title>
+    <link rel="stylesheet" href="/css/about.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>🧁 Matcha Latte • About Me 🧁</h1>
-    </header>
+    <div class="retro-window">
+        <!-- Retro Window Top Bar -->
+        <div class="title-bar">
+            <span>♡ AboutMe.exe - Safari</span>
+            <div class="window-buttons">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
 
-    <nav class="cafe-menu">
-        <a href="/">☕ Espresso (Home)</a>
-        <a href="/about">🧁 Matcha (About)</a>
-        <a href="/portfolio">📖 Daily Specials (Assignments)</a>
-        <a href="/guestbook">💌 Guestbook</a>
-    </nav>
+        <!-- Content Inside the Window -->
+        <div class="window-content">
+            <h1>about xandrine.</h1>
+            <p class="tagline">developer // digital creator // dreamer</p>
 
-    <div class="container">
-        <h2>Hi, I'm Xandrine! 🎀</h2>
-        <div class="bio-box">
-            <div class="bio-text">
-                <p>Welcome to the cozy corner of my digital universe! I love combining cozy aesthetics, creative coding,
-                    and retro 2000s internet charm into everything I build.</p>
-                <p>This space serves as my magical inventory and creative portfolio where I organize all my university
-                    projects and assignments with a sweet twist.</p>
+            <hr class="retro-divider">
 
-                <h3>✨ My Vibe & Tools:</h3>
-                <ul class="badge-list">
-                    <li>Node.js & Express</li>
-                    <li>HTML/CSS Magic</li>
-                    <li>Pastel Y2K Design</li>
-                    <li>Iced Matcha Lattes</li>
-                </ul>
+            <div class="about-grid">
+                <!-- Left: Polaroids / Image Box -->
+                <div class="about-avatar-box">
+                    <div
+                        style="background: #fce4ec; height: 140px; display: flex; align-items: center; justify-content: center; border: 1px dashed #111; font-size: 3rem;">
+                        ☕✨
+                    </div>
+                    <p style="font-size: 0.8rem; margin: 8px 0 0 0; font-weight: bold;">@xandrine.cafe-y2k</p>
+                </div>
+
+                <!-- Right: Bio Information -->
+                <div class="about-text-box">
+                    <p>Welcome to my corner of the web! I blend soft pastel aesthetics with backend architecture,
+                        building cozy digital experiences.</p>
+
+                    <p><strong>fun facts & stack:</strong></p>
+                    <ul class="bio-list">
+                        <li><strong>vibe:</strong> Y2K cyber-chic & cozy café</li>
+                        <li><strong>tech stack:</strong> Node.js, Express, EJS</li>
+                        <li><strong>fuel:</strong> iced coffee & pastel themes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Navigation Bar -->
+            <div class="nav-links">
+                <a href="/">home</a>
+                <a href="/about">about</a>
+                <a href="/portfolio">portfolio</a>
+                <a href="/guestbook">guestbook</a>
             </div>
         </div>
     </div>
-
-    <footer>
-        <p>© 2026 Xandrine • Made with 💖 and Node.js</p>
-    </footer>
 
 </body>
 

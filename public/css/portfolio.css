@@ -1,0 +1,157 @@
+/* Portfolio Page Y2K Stylesheet */
+:root {
+    --bg-pink: #fce4ec;
+    --dot-color: #222222;
+    --window-bg: rgba(255, 255, 255, 0.95);
+    --border-dark: #111111;
+    --accent-pink: #ff80ab;
+}
+
+body {
+    background-color: var(--bg-pink);
+    background-image: radial-gradient(var(--dot-color) 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    font-family: "Courier New", Courier, monospace;
+    color: var(--border-dark);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Retro Mac OS Window Wrapper */
+.retro-window {
+    background: var(--window-bg);
+    border: 2px solid var(--border-dark);
+    box-shadow: 6px 6px 0px var(--border-dark);
+    width: 700px;
+    max-width: 95vw;
+    margin: auto;
+}
+
+/* Window Title Bar */
+.title-bar {
+    background: var(--border-dark);
+    color: white;
+    padding: 6px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.window-buttons span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+/* Window Content Area */
+.window-content {
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.2rem;
+    text-transform: lowercase;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+    font-style: italic;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.retro-divider {
+    border: 1px dashed #222;
+    margin: 20px 0;
+}
+
+/* Portfolio Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    text-align: left;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--border-dark);
+    padding: 15px;
+    box-shadow: 3px 3px 0px var(--border-dark);
+    transition: transform 0.1s ease;
+}
+
+.project-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px var(--accent-pink);
+}
+
+.project-title {
+    font-size: 1.05rem;
+    margin: 0 0 8px 0;
+    text-transform: lowercase;
+    font-weight: bold;
+}
+
+.project-desc {
+    font-size: 0.85rem;
+    color: #444;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.project-link {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--border-dark);
+    color: white;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    background: var(--accent-pink);
+    color: var(--border-dark);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    background: white;
+    color: var(--border-dark);
+    border: 2px solid var(--border-dark);
+    padding: 8px 16px;
+    font-weight: bold;
+    box-shadow: 3px 3px 0px var(--border-dark);
+    transition: all 0.1s ease;
+}
+
+.nav-links a:hover {
+    background: var(--border-dark);
+    color: white;
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px var(--accent-pink);
+}

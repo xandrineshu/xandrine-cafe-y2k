@@ -1,30 +1,43 @@
-const express = require('express');
-const app = express();
+<!DOCTYPE html>
+<html lang="en">
 
-// Set EJS as the templating engine
-app.set('view engine', 'ejs');
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal // Xandrine's Y2K Café</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
 
-// Serve static files (like CSS, images, client-side JS if needed)
-app.use(express.static('public'));
+<body>
 
-// Routes
-app.get('/', (req, res) => {
-res.render('home');
-});
+    <div class="retro-window">
+        <!-- Retro Window Top Bar -->
+        <div class="title-bar">
+            <span>♡ Journal.exe - Safari</span>
+            <div class="window-buttons">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
 
-app.get('/about', (req, res) => {
-res.render('about');
-});
+        <!-- Content Inside the Window -->
+        <div class="window-content">
+            <h1>amour doux.</h1>
+            <p class="tagline">introducing // @xandrine.cafe-y2k</p>
 
-app.get('/portfolio', (req, res) => {
-res.render('portfolio');
-});
+            <hr style="border: 1px dashed #222; margin: 20px 0;">
 
-app.get('/guestbook', (req, res) => {
-res.render('guestbook');
-});
+            <p>Welcome to my cozy pastel digital space. Brewing aesthetics, code, and memories.</p>
 
-const PORT = 3007;
-app.listen(PORT, () => {
-console.log(`✨ Xandrine's Y2k Cafe is about to open at http://localhost:3007 ☕💖`);
-});
+            <!-- Navigation Bar mimicking your Y2K layout links -->
+            <div class="nav-links">
+                <a href="/">home</a>
+                <a href="/about">about</a>
+                <a href="/portfolio">portfolio</a>
+                <a href="/guestbook">guestbook</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

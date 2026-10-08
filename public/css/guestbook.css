@@ -1,0 +1,90 @@
+/* Guestbook Specific Layout Styles */
+.guestbook-window {
+    width: 700px;
+}
+
+.retro-divider {
+    border: 1px dashed #222;
+    margin: 20px 0;
+}
+
+.guestbook-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+}
+
+.section-title {
+    margin-top: 0;
+    font-size: 1.1rem;
+    text-transform: lowercase;
+}
+
+.form-label {
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.retro-form input,
+.retro-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 2px solid #111;
+    background: #fff;
+    font-family: "Courier New", Courier, monospace;
+    box-sizing: border-box;
+}
+
+.retro-btn {
+    background: #ff80ab;
+    border: 2px solid #111;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+    box-shadow: 3px 3px 0px #111;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.retro-btn:hover {
+    background: #111;
+    color: #fff;
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px #ff80ab;
+}
+
+.guestbook-container {
+    text-align: left;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.entry-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1.5px dashed #111;
+    padding: 10px 15px;
+    margin-bottom: 12px;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 5px;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 3px;
+}
+
+.entry-msg {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+}
+
+.guestbook-nav {
+    margin-top: 30px;
+}
