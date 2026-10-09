@@ -8,6 +8,18 @@
 }
 
 body {
+    /* Sets a heart cursor (or falls back to custom pointer) */
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewport='0 0 20 20' style='fill:black;'><path d='M10 3.22l-.61-.6a5.5 5.5 0 0 0-7.78 7.77L10 18.78l8.39-8.4a5.5 5.5 0 0 0-7.78-7.77l-.61.61z'/></svg>"), auto;
+}
+
+/* Make sure links and buttons also keep the heart pointer */
+a,
+button,
+input[type="submit"] {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewport='0 0 20 20' style='fill:#ff80ab;'><path d='M10 3.22l-.61-.6a5.5 5.5 0 0 0-7.78 7.77L10 18.78l8.39-8.4a5.5 5.5 0 0 0-7.78-7.77l-.61.61z'/></svg>"), pointer;
+}
+
+body {
     background-color: var(--bg-pink);
     /* Creates the classic Y2K polka dot grid pattern */
     background-image: radial-gradient(var(--dot-color) 1.5px, transparent 1.5px);
