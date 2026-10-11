@@ -7,78 +7,84 @@
     <title>Guestbook // Xandrine's Y2K Café</title>
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/guestbook.css">
+    <link rel="stylesheet" href="/css/music-player.css">
     <script src="/js/sparkles.js"></script>
+    <script src="/js/music-player.js"></script>
+    <script src="/js/router.js"></script>
 </head>
 
 <body>
 
-    <div class="retro-window guestbook-window">
-        <!-- Retro Window Top Bar -->
-        <div class="title-bar">
-            <span>♡ Guestbook.exe - Safari</span>
-            <div class="window-buttons">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
+    <%- include('partials/music-player') %>
 
-        <!-- Content Inside the Window -->
-        <div class="window-content">
-            <h1>guestbook.</h1>
-            <p class="tagline">leave a little note before you leave the cafe!</p>
-
-            <hr class="retro-divider">
-
-            <div class="guestbook-grid">
-                <!-- Left Column: Sign the Guestbook Form -->
-                <div class="guestbook-form-col">
-                    <h3 class="section-title">✍️ sign my guestbook</h3>
-                    <form action="/guestbook" method="POST" class="retro-form">
-                        <label class="form-label">your name / handle:</label>
-                        <input type="text" name="name" required placeholder="@y2k_angel">
-
-                        <label class="form-label">your message:</label>
-                        <textarea name="message" rows="3" required placeholder="love the aesthetic! 💖"></textarea>
-
-                        <button type="submit" class="retro-btn">post entry 💌</button>
-                    </form>
-                </div>
-
-                <!-- Right Column: View Entries -->
-                <div class="guestbook-entries-col">
-                    <h3 class="section-title">💬 recent notes</h3>
-                    <div class="guestbook-container">
-                        <% if (locals.entries && entries.length> 0) { %>
-                            <% entries.forEach(entry=> { %>
-                                <div class="entry-card">
-                                    <div class="entry-header">
-                                        <strong>
-                                            <%= entry.name %>
-                                        </strong>
-                                        <span>
-                                            <%= entry.date %>
-                                        </span>
-                                    </div>
-                                    <p class="entry-msg">
-                                        <%= entry.message %>
-                                    </p>
-                                </div>
-                                <% }) %>
-                                    <% } else { %>
-                                        <p class="no-entries">No entries yet. Be the first to sign!</p>
-                                        <% } %>
+        <div id="swup-container">
+            <div class="retro-window guestbook-window">
+                <!-- Retro Window Top Bar -->
+                <div class="title-bar">
+                    <span>♡ Guestbook.exe - Safari</span>
+                    <div class="window-buttons">
+                        <span></span><span></span><span></span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Navigation Bar -->
-            <div class="nav-links guestbook-nav">
-                <a href="/">home</a>
-                <a href="/about">about</a>
-                <a href="/portfolio">portfolio</a>
-                <a href="/guestbook">guestbook</a>
+                <!-- Content Inside the Window -->
+                <div class="window-content">
+                    <h1>guestbook.</h1>
+                    <p class="tagline">leave a little note before you leave the cafe!</p>
+
+                    <hr class="retro-divider">
+
+                    <div class="guestbook-grid">
+
+                        <!-- Left Column: The Sign Form -->
+                        <div>
+                            <h3 class="section-title">✏️ sign my guestbook</h3>
+                            <!-- Form Section -->
+                            <form action="/guestbook" method="POST" class="retro-form">
+                                <label class="form-label">your name / handle:</label>
+                                <input type="text" name="name" maxlength="15" placeholder="y2k_angel" required>
+
+                                <label class="form-label">your message (max 100 chars):</label>
+                                <textarea name="message" rows="3" maxlength="100" placeholder="love the aesthetic! 💖" required></textarea>
+
+                                <button type="submit" class="retro-btn">post entry 💌</button>
+                            </form>
+                        </div>
+
+                        <!-- Right Column: Recent Notes Feed -->
+                        <div>
+                            <h3 class="section-title">💬 recent notes</h3>
+                            <div class="guestbook-container">
+                                <% if (entries && entries.length> 0) { %>
+                                    <% entries.slice(0, 3).forEach(entry=> { %>
+                                        <div class="entry-card">
+                                            <div class="entry-header">
+                                                <!-- Put it right here! -->
+                                                <span><strong>
+                                                        <%= entry.name.startsWith('@') ? entry.name : '@' + entry.name %>
+                                                    </strong></span>
+                                                <span>
+                                                    <%= entry.date %>
+                                                </span>
+                                            </div>
+                                            <p class="entry-msg">
+                                                <%= entry.message %>
+                                            </p>
+                                        </div>
+                                        <% }) %>
+                                            <% } else { %>
+                                                <p style="font-size: 0.9rem; color: #555; text-align: center; margin-top: 20px;">No entries yet.
+                                                    Be the first to sign!</p>
+                                                <% } %>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <%- include('partials/nav') %>
+                </div>
             </div>
         </div>
-    </div>
 
 </body>
 

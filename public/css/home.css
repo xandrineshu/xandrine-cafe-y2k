@@ -8,20 +8,7 @@
 }
 
 body {
-    /* Sets a heart cursor (or falls back to custom pointer) */
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewport='0 0 20 20' style='fill:black;'><path d='M10 3.22l-.61-.6a5.5 5.5 0 0 0-7.78 7.77L10 18.78l8.39-8.4a5.5 5.5 0 0 0-7.78-7.77l-.61.61z'/></svg>"), auto;
-}
-
-/* Make sure links and buttons also keep the heart pointer */
-a,
-button,
-input[type="submit"] {
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewport='0 0 20 20' style='fill:#ff80ab;'><path d='M10 3.22l-.61-.6a5.5 5.5 0 0 0-7.78 7.77L10 18.78l8.39-8.4a5.5 5.5 0 0 0-7.78-7.77l-.61.61z'/></svg>"), pointer;
-}
-
-body {
     background-color: var(--bg-pink);
-    /* Creates the classic Y2K polka dot grid pattern */
     background-image: radial-gradient(var(--dot-color) 1.5px, transparent 1.5px);
     background-size: 24px 24px;
     font-family: "Courier New", Courier, monospace;
@@ -32,6 +19,49 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+}
+
+#cafe-menu-window {
+    position: fixed;
+    top: 150px;
+    left: 20px;
+    z-index: 1000;
+}
+
+/* Top Left Desktop Dock */
+.desktop-dock {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    /* Moved to top-left */
+    display: flex;
+    gap: 8px;
+    z-index: 9999;
+}
+
+.dock-btn {
+    background: #fff;
+    border: 2px solid #111;
+    padding: 6px 12px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    font-size: 0.8rem;
+    box-shadow: 2px 2px 0px #111;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.dock-btn:hover {
+    background: #ff80ab;
+}
+
+.dock-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px #111;
+}
+
+.close-btn {
+    cursor: pointer;
 }
 
 /* Retro Mac OS Window Wrapper */

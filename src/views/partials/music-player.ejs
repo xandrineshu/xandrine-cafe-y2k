@@ -1,0 +1,26 @@
+<div class="retro-player">
+    <div class="player-title-bar">
+        <span>🎧 mp3_player.exe - Music</span>
+        <div class="window-buttons">
+            <span class="close-btn" data-target="music-player-window"></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="player-content">
+        <div class="track-display" id="track-info">♪ Now Playing: Lofi Cafe Beats</div>
+
+        <!-- Audio Element with sample tracks -->
+        <audio id="bg-audio" loop>
+            <source id="audio-source"
+                src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf756.mp3?filename=lofi-study-112191.mp3"
+                type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="player-controls">
+            <button id="play-btn" class="retro-btn-sm">▶ Play</button>
+            <button id="switch-btn" class="retro-btn-sm">✨ Switch Genre</button>
+        </div>
+    </div>
+</div>

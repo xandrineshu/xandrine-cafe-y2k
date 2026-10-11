@@ -1,0 +1,59 @@
+.retro-player {
+    background: #c0c0c0;
+    border: 2px solid var(--border-dark);
+    box-shadow: 4px 4px 0px var(--border-dark);
+    width: 280px;
+    font-family: monospace;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.player-title-bar {
+    background: #ff80ab;
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-content {
+    padding: 10px;
+    background: var(--window-bg);
+}
+
+.track-display {
+    background: black;
+    color: #ff80ab;
+    padding: 6px;
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+    border: 1px inset #ff80ab;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.player-controls {
+    display: flex;
+    gap: 6px;
+}
+
+.retro-btn-sm {
+    background: var(--btn-bg);
+    border: 2px solid var(--border-dark);
+    box-shadow: 2px 2px 0px var(--border-dark);
+    font-family: monospace;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.retro-btn-sm:active {
+    box-shadow: none;
+    transform: translate(2px, 2px);
+}

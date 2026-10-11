@@ -2,39 +2,48 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journal // Xandrine's Y2K Café</title>
-    <link rel="stylesheet" href="/css/home.css">
-    <script src="/js/sparkles.js"></script>
+    <%- include('partials/head') %>
 </head>
 
 <body>
+    <!-- Top-Left Retro Desktop Dock -->
+    <div class="desktop-dock">
+        <button class="dock-btn" data-target="music-player-window">🎵 Music</button>
+        <button class="dock-btn" data-target="cafe-menu-window">☕ Menu</button>
+        <button class="dock-btn" data-target="cat-companion-window" disabled>🐱 Cat (Soon)</button>
+    </div>
 
-    <div class="retro-window">
-        <!-- Retro Window Top Bar -->
-        <div class="title-bar">
-            <span>♡ Journal.exe - Safari</span>
-            <div class="window-buttons">
-                <span></span><span></span><span></span>
+    <!-- Music Player Window -->
+    <div id="music-player-window" style="display: none;">
+        <%- include('partials/music-player') %>
+    </div>
+
+    <!-- Cafe Menu Window -->
+    <div id="cafe-menu-window" style="display: none;">
+        <%- include('partials/drink-menu') %>
+    </div>
+
+    <!-- Main Window -->
+    <div id="swup-container">
+        <div class="retro-window">
+            <div class="title-bar">
+                <span>♡ Journal.exe - Safari</span>
+                <div class="window-buttons">
+                    <span></span><span></span><span></span>
+                </div>
             </div>
-        </div>
 
-        <!-- Content Inside the Window -->
-        <div class="window-content">
-            <h1>amour doux.</h1>
-            <p class="tagline">introducing // @xandrine.cafe-y2k</p>
+            <div class="window-content">
+                <h1>amour doux.</h1>
+                <p class="tagline">introducing // @xandrine.café-y2k</p>
 
-            <hr style="border: 1px dashed #222; margin: 20px 0;">
+                <hr style="border: 1px dashed #222; margin: 20px 0;">
 
-            <p>Welcome to my cozy pastel digital space. Brewing aesthetics, code, and memories.</p>
+                <p>
+                    Welcome to my cozy pastel digital space.
+                    Brewing aesthetics, code, and memories. (*ᴗ͈ˬᴗ͈)ꕤ*.ﾟ</p>
 
-            <!-- Navigation Bar mimicking your Y2K layout links -->
-            <div class="nav-links">
-                <a href="/">home</a>
-                <a href="/about">about</a>
-                <a href="/portfolio">portfolio</a>
-                <a href="/guestbook">guestbook</a>
+                <%- include('partials/nav') %>
             </div>
         </div>
     </div>

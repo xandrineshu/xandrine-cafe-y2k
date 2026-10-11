@@ -1,0 +1,64 @@
+.drink-window {
+    width: 300px;
+    /* Makes the window narrower */
+    max-width: 100%;
+}
+
+.drink-window .window-content {
+    padding: 12px 15px;
+    /* Reduces inner padding so it's less long */
+    text-align: center;
+}
+
+.drink-window .tagline {
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+}
+
+.drink-window .drink-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 items per row */
+    gap: 6px;
+    margin-top: 5px;
+}
+
+.drink-window .drink-spawn {
+    width: 100%;
+    font-size: 0.75rem;
+    padding: 6px 4px;
+    text-align: center;
+}
+
+.drink-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.spawned-cafe-item {
+    position: fixed;
+    cursor: grab;
+    user-select: none;
+    z-index: 2000;
+}
+
+.spawned-cafe-item img {
+    width: 75px;
+    /* Adjust size of items as they appear */
+    height: auto;
+    image-rendering: pixelated;
+    /* Keeps pixel art looking super sharp */
+    filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.2));
+    pointer-events: none;
+}
+
+.spawned-cafe-item:active {
+    cursor: grabbing;
+}
+
+.spawned-cafe-item:active {
+    cursor: grabbing;
+    transform: scale(1.1);
+}
