@@ -9,6 +9,7 @@
     <!-- Guestbook Window -->
     <div id="swup-container">
         <div class="guestbook-window">
+            
             <div class="title-bar">
                 <span>♡ Guestbook.exe - Safari</span>
                 <div class="window-buttons">
@@ -54,10 +55,12 @@
                                                 <%= entry.date %>
                                             </span>
                                         </div>
+                                        
                                         <p class="entry-msg">
                                             <%= entry.message %>
                                         </p>
                                     </div>
+
                                     <% }) %>
                                         <% } else { %>
                                             <p
@@ -66,7 +69,6 @@
                                             <% } %>
                         </div>
                     </div>
-    
                 </div>
     
                 <%- include('partials/nav') %>
