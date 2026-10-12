@@ -1,17 +1,41 @@
-/* Guestbook Specific Layout Styles */
+/* ==========================================
+   1. GUESTBOOK WINDOW & GRID LAYOUT
+   ========================================== */
 .guestbook-window {
-    width: 700px;
+    width: 850px;
+    max-width: 95vw;
+    background: var(--window-bg, rgba(255, 255, 255, 0.95));
+    border: 2px solid var(--border-dark, #111);
+    box-shadow: 6px 6px 0px var(--border-dark, #111);
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
-.retro-window {
-    background: var(--window-bg);
-    border: 2px solid var(--border-dark);
-    box-shadow: 6px 6px 0px var(--border-dark);
-    width: 950px;
-    max-width: 95vw;
-    margin: auto;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
+.guestbook-window .title-bar {
+    background: var(--border-dark, #111);
+    color: white;
+    padding: 6px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: move;
+}
+
+.guestbook-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 30px;
+    text-align: left;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .guestbook-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .retro-divider {
@@ -19,15 +43,9 @@
     margin: 20px 0;
 }
 
-.guestbook-grid {
-    display: grid;
-    grid-template-columns: 340px 1fr;
-    /* Narrows the left form box and widens the right side */
-    gap: 30px;
-    text-align: left;
-    align-items: start;
-}
-
+/* ==========================================
+   2. FORM STYLING & INPUTS
+   ========================================== */
 .section-title {
     margin-top: 0;
     font-size: 1.1rem;
@@ -69,6 +87,9 @@
     box-shadow: 5px 5px 0px #ff80ab;
 }
 
+/* ==========================================
+   3. ENTRIES FEED & CARDS
+   ========================================== */
 .guestbook-container {
     text-align: left;
     max-height: 400px;
@@ -81,22 +102,7 @@
     padding: 12px;
     margin-bottom: 12px;
     background: #fff;
-    max-width: 550px;
     box-sizing: border-box;
-}
-
-.entry-msg {
-    margin: 5px 0 0 0;
-    font-size: 0.9rem;
-    text-align: left;
-    /* Forces text to stick to the left */
-    display: block;
-    /* Prevents inline/flex stretching */
-    white-space: normal;
-    /* Collapses multi-line text cleanly */
-    word-break: break-word;
-    /* Wraps long words naturally */
-    overflow-wrap: break-word;
 }
 
 .entry-header {
@@ -107,6 +113,16 @@
     margin-bottom: 5px;
     border-bottom: 1px dotted #ccc;
     padding-bottom: 3px;
+}
+
+.entry-msg {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+    text-align: left;
+    display: block;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .guestbook-nav {

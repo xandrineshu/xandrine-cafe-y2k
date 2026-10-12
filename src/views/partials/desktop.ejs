@@ -1,0 +1,21 @@
+<!-- Top-Left Retro Desktop Dock -->
+<div class="desktop-dock">
+    <button class="dock-btn" data-target="music-player-window">🎵 Music</button>
+    <button class="dock-btn" data-target="cafe-menu-window">☕ Menu</button>
+    <button class="dock-btn" data-target="cat-companion-window">🐈‍⬛ Kuroo</button>
+</div>
+
+<!-- Music Player Window -->
+<div id="music-player-window" style="display: none;">
+    <%- include('music-player') %>
+</div>
+
+<!-- Cafe Menu Window -->
+<div id="cafe-menu-window" style="display: none;">
+    <%- include('menu') %>
+</div>
+
+<!-- Kuroo Cat Companion Window -->
+<div id="cat-companion-window" style="display: none;">
+    <%- include('cat-companion') %>
+</div>

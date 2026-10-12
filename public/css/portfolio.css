@@ -1,42 +1,19 @@
-/* Portfolio Page Y2K Stylesheet */
-:root {
-    --bg-pink: #fce4ec;
-    --dot-color: #222222;
-    --window-bg: rgba(255, 255, 255, 0.95);
-    --border-dark: #111111;
-    --accent-pink: #ff80ab;
-}
-
-body {
-    background-color: var(--bg-pink);
-    background-image: radial-gradient(var(--dot-color) 1.5px, transparent 1.5px);
-    background-size: 24px 24px;
-    font-family: "Courier New", Courier, monospace;
-    color: var(--border-dark);
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-/* Retro Mac OS Window Wrapper */
-.retro-window {
-    background: var(--window-bg);
-    border: 2px solid var(--border-dark);
-    box-shadow: 6px 6px 0px var(--border-dark);
+/* ==========================================
+   1. PORTFOLIO WINDOW CONTAINER
+   ========================================== */
+.portfolio-window {
+    background: var(--window-bg, rgba(255, 255, 255, 0.95));
+    border: 2px solid var(--border-dark, #111111);
+    box-shadow: 6px 6px 0px var(--border-dark, #111111);
     width: 950px;
-    /* Increased width for a wider layout */
     max-width: 95vw;
     margin: auto;
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
 
-/* Window Title Bar */
-.title-bar {
-    background: var(--border-dark);
+.portfolio-window .title-bar {
+    background: var(--border-dark, #111111);
     color: white;
     padding: 6px 12px;
     display: flex;
@@ -44,6 +21,7 @@ body {
     align-items: center;
     font-size: 14px;
     font-weight: bold;
+    cursor: move;
 }
 
 .window-buttons span {
@@ -55,12 +33,14 @@ body {
     margin-left: 5px;
 }
 
-/* Window Content Area */
 .window-content {
     padding: 30px;
     text-align: center;
 }
 
+/* ==========================================
+   2. TYPOGRAPHY & DIVIDERS
+   ========================================== */
 h1 {
     font-size: 2.2rem;
     text-transform: lowercase;
@@ -83,7 +63,9 @@ h1 {
     margin: 20px 0;
 }
 
-/* Portfolio Grid */
+/* ==========================================
+   3. PROJECTS GRID & CARDS
+   ========================================== */
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -91,17 +73,23 @@ h1 {
     text-align: left;
 }
 
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .project-card {
     background: rgba(255, 255, 255, 0.9);
-    border: 2px solid var(--border-dark);
+    border: 2px solid var(--border-dark, #111111);
     padding: 15px;
-    box-shadow: 3px 3px 0px var(--border-dark);
-    transition: transform 0.1s ease;
+    box-shadow: 3px 3px 0px var(--border-dark, #111111);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 .project-card:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 5px 5px 0px var(--accent-pink);
+    box-shadow: 5px 5px 0px var(--accent-pink, #ff80ab);
 }
 
 .project-title {
@@ -121,40 +109,15 @@ h1 {
 .project-link {
     display: inline-block;
     text-decoration: none;
-    background: var(--border-dark);
+    background: var(--border-dark, #111111);
     color: white;
     padding: 4px 10px;
     font-size: 0.75rem;
     font-weight: bold;
+    transition: background 0.15s ease, color 0.15s ease;
 }
 
 .project-link:hover {
-    background: var(--accent-pink);
-    color: var(--border-dark);
-}
-
-/* Navigation Links */
-.nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    background: white;
-    color: var(--border-dark);
-    border: 2px solid var(--border-dark);
-    padding: 8px 16px;
-    font-weight: bold;
-    box-shadow: 3px 3px 0px var(--border-dark);
-    transition: all 0.1s ease;
-}
-
-.nav-links a:hover {
-    background: var(--border-dark);
-    color: white;
-    transform: translate(-2px, -2px);
-    box-shadow: 5px 5px 0px var(--accent-pink);
+    background: var(--accent-pink, #ff80ab);
+    color: var(--border-dark, #111111);
 }

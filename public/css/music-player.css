@@ -1,3 +1,6 @@
+/* ==========================================
+   1. MUSIC PLAYER CONTAINER & LAYOUT
+   ========================================== */
 .retro-player {
     background: #c0c0c0;
     border: 2px solid var(--border-dark);
@@ -10,6 +13,9 @@
     z-index: 1000;
 }
 
+/* ==========================================
+   2. PLAYER TITLE BAR
+   ========================================== */
 .player-title-bar {
     background: #ff80ab;
     color: white;
@@ -20,6 +26,9 @@
     align-items: center;
 }
 
+/* ==========================================
+   3. CONTENT & TRACK DISPLAY
+   ========================================== */
 .player-content {
     padding: 10px;
     background: var(--window-bg);
@@ -37,6 +46,9 @@
     text-overflow: ellipsis;
 }
 
+/* ==========================================
+   4. PLAYER CONTROLS & BUTTONS
+   ========================================== */
 .player-controls {
     display: flex;
     gap: 6px;

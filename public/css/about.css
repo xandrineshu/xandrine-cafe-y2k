@@ -1,41 +1,19 @@
-/* About Page Y2K Stylesheet */
-:root {
-    --bg-pink: #fce4ec;
-    --dot-color: #222222;
-    --window-bg: rgba(255, 255, 255, 0.95);
-    --border-dark: #111111;
-    --accent-pink: #ff80ab;
-}
-
-body {
-    background-color: var(--bg-pink);
-    background-image: radial-gradient(var(--dot-color) 1.5px, transparent 1.5px);
-    background-size: 24px 24px;
-    font-family: "Courier New", Courier, monospace;
-    color: var(--border-dark);
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-/* Retro Mac OS Window Wrapper */
-/* Update the retro-window width from 650px to 800px */
-.retro-window {
-    background: var(--window-bg);
-    border: 2px solid var(--border-dark);
-    box-shadow: 6px 6px 0px var(--border-dark);
+/* ==========================================
+   1. ABOUT PAGE WINDOW STYLING
+   ========================================== */
+.about-window {
+    background: var(--window-bg, rgba(255, 255, 255, 0.95));
+    border: 2px solid var(--border-dark, #111111);
+    box-shadow: 6px 6px 0px var(--border-dark, #111111);
     width: 800px;
-    /* Made wider! */
-    max-width: 95vw;
+    max-width: 90vw;
     margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
-/* Window Title Bar */
-.title-bar {
-    background: var(--border-dark);
+.about-window .title-bar {
+    background: var(--border-dark, #111111);
     color: white;
     padding: 6px 12px;
     display: flex;
@@ -43,6 +21,7 @@ body {
     align-items: center;
     font-size: 14px;
     font-weight: bold;
+    cursor: move;
 }
 
 .window-buttons span {
@@ -54,12 +33,14 @@ body {
     margin-left: 5px;
 }
 
-/* Window Content Area */
 .window-content {
     padding: 30px;
     text-align: center;
 }
 
+/* ==========================================
+   2. TYPOGRAPHY & DIVIDERS
+   ========================================== */
 h1 {
     font-size: 2.2rem;
     text-transform: lowercase;
@@ -82,7 +63,9 @@ h1 {
     margin: 20px 0;
 }
 
-/* About Content Grid */
+/* ==========================================
+   3. ABOUT CONTENT GRID & BIO LIST
+   ========================================== */
 .about-grid {
     display: flex;
     gap: 30px;
@@ -91,66 +74,48 @@ h1 {
 }
 
 .about-avatar-box {
-    border: 2px solid var(--border-dark);
+    border: 2px solid var(--border-dark, #111111);
     background: #fff;
     padding: 10px;
     text-align: center;
     width: 180px;
     flex-shrink: 0;
-    box-shadow: 4px 4px 0px var(--border-dark);
+    box-shadow: 4px 4px 0px var(--border-dark, #111111);
     margin-top: 1rem;
+}
+
+.about-avatar-box img {
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
 }
 
 .about-text-box {
     flex-grow: 1;
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.4;
+}
+
+.about-text-box p {
+    margin-bottom: 1.5rem;
 }
 
 .bio-list {
     list-style: none;
-    /* Removes the default squares/dots */
     padding-left: 0;
-    margin-top: 10px;
+    margin-top: -1rem;
+    padding-inline: 0.8rem;
 }
 
 .bio-list li {
     position: relative;
     padding-left: 20px;
-    /* Space for our custom heart */
-    margin-bottom: 6px;
+    margin-bottom: 3px;
 }
 
 .bio-list li::before {
     content: "♡ ";
-    /* The heart symbol */
     position: absolute;
     left: 0;
-    color: var(--border-dark);
-}
-
-/* Navigation Links */
-.nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    background: white;
-    color: var(--border-dark);
-    border: 2px solid var(--border-dark);
-    padding: 8px 16px;
-    font-weight: bold;
-    box-shadow: 3px 3px 0px var(--border-dark);
-    transition: all 0.1s ease;
-}
-
-.nav-links a:hover {
-    background: var(--border-dark);
-    color: white;
-    transform: translate(-2px, -2px);
-    box-shadow: 5px 5px 0px var(--accent-pink);
+    color: var(--border-dark, #111111);
 }

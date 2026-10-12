@@ -1,31 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <%- include('partials/head') %>
-</head>
+<%- include('partials/head') %>
 
 <body>
-    <!-- Top-Left Retro Desktop Dock -->
-    <div class="desktop-dock">
-        <button class="dock-btn" data-target="music-player-window">🎵 Music</button>
-        <button class="dock-btn" data-target="cafe-menu-window">☕ Menu</button>
-        <button class="dock-btn" data-target="cat-companion-window" disabled>🐱 Cat (Soon)</button>
-    </div>
-
-    <!-- Music Player Window -->
-    <div id="music-player-window" style="display: none;">
-        <%- include('partials/music-player') %>
-    </div>
-
-    <!-- Cafe Menu Window -->
-    <div id="cafe-menu-window" style="display: none;">
-        <%- include('partials/drink-menu') %>
-    </div>
+    <%- include('partials/desktop') %>
 
     <!-- Main Window -->
     <div id="swup-container">
-        <div class="retro-window">
+        <div class="home-window">
             <div class="title-bar">
                 <span>♡ Journal.exe - Safari</span>
                 <div class="window-buttons">
@@ -35,7 +18,7 @@
 
             <div class="window-content">
                 <h1>amour doux.</h1>
-                <p class="tagline">introducing // @xandrine.café-y2k</p>
+                <p class="tagline">introducing // @xandrine.café-y2k ˚.🎀༘⋆</p>
 
                 <hr style="border: 1px dashed #222; margin: 20px 0;">
 
@@ -48,6 +31,10 @@
         </div>
     </div>
 
+    <!-- Retro Reset Desktop Button -->
+    <button id="reset-desktop-btn" title="Reset all windows & treats to default">🔄 Reset Desktop</button>
+
+    <%- include('partials/modal') %>
 </body>
 
 </html>

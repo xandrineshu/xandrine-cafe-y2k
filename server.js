@@ -6,30 +6,42 @@ app.set('views', path.join(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
-// 1. Middleware to read form data must be at the top
+// 1. Middleware to read form data
 app.use(express.urlencoded({ extended: true }));
 
 // 2. In-memory storage for guestbook messages
 const guestbookEntries = [];
 
+// Base suffix for browser titles
+const TITLE_SUFFIX = " // Xandrine's Y2K Café";
+
+// 3. Route Handlers with Dynamic Titles
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('home', {
+        title: `Journal${TITLE_SUFFIX}`
+    });
 });
 
 app.get('/about', (req, res) => {
-    res.render('about');
+    res.render('about', {
+        title: `About${TITLE_SUFFIX}`
+    });
 });
 
 app.get('/portfolio', (req, res) => {
-    res.render('portfolio');
+    res.render('portfolio', {
+        title: `Portfolio${TITLE_SUFFIX}`
+    });
 });
 
-// 3. Single GET route for guestbook passing the entries array
 app.get('/guestbook', (req, res) => {
-    res.render('guestbook', { entries: guestbookEntries });
+    res.render('guestbook', {
+        title: `Guestbook${TITLE_SUFFIX}`,
+        entries: guestbookEntries
+    });
 });
 
-// 4. POST route to handle new guestbook signatures with character limits
+// 4. POST route for guestbook signatures
 app.post('/guestbook', (req, res) => {
     let { name, message } = req.body;
 

@@ -1,97 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio // Xandrine's Y2K Café</title>
-    <link rel="stylesheet" href="/css/portfolio.css">
-    <link rel="stylesheet" href="/css/music-player.css">
-    <script src="/js/sparkles.js"></script>
-    <script src="/js/music-player.js"></script>
-    <script src="/js/router.js"></script>
-</head>
+<%- include('partials/head') %>
 
 <body>
+    <%- include('partials/desktop') %>
 
-    <%- include('partials/music-player') %>
-
-        <div id="swup-container">
-            <div class="retro-window">
-                <!-- Retro Window Top Bar -->
-                <div class="title-bar">
-                    <span>♡ Portfolio.exe - Safari</span>
-                    <div class="window-buttons">
-                        <span></span><span></span><span></span>
-                    </div>
-                </div>
-
-                <!-- Content Inside the Window -->
-                <div class="window-content">
-                    <h1>my works.</h1>
-                    <p class="tagline">featured digital creations & projects</p>
-
-                    <hr class="retro-divider">
-
-                    <!-- Projects Grid -->
-                    <div class="projects-grid">
-
-                        <div class="project-card">
-                            <h3 class="project-title">🌊 cse340-course-app</h3>
-                            <p class="project-desc">A professional inventory and vehicle management web application
-                                featuring user accounts,
-                                classification views, and inventory database tracking.</p>
-                            <a href="https://cse340-6kte.onrender.com" target="_blank" class="project-link">view site
-                                ↗</a>
-                        </div>
-
-                        <div class="project-card">
-                            <h3 class="project-title">🐱 Nekolist</h3>
-                            <p class="project-desc">An anime introductory website where beginners can learn what anime
-                                is and get a curated
-                                list of recommendations to start watching.</p>
-                            <a href="https://xandrineshu.github.io/wdd130/nekolist/index.html" target="_blank"
-                                class="project-link">view
-                                site ↗</a>
-                        </div>
-
-                        <div class="project-card">
-                            <h3 class="project-title">🎶 Melodyhub</h3>
-                            <p class="project-desc">An informational website about music, exploring what music means and
-                                breaking down the
-                                various types of genres.</p>
-                            <a href="https://xandrineshu.github.io/wdd131/project/home.html" target="_blank"
-                                class="project-link">view site
-                                ↗</a>
-                        </div>
-
-                        <div class="project-card">
-                            <h3 class="project-title">✨ Pokemon Strategist</h3>
-                            <p class="project-desc">A tool to search for any Pokémon card you wish, view their stats,
-                                and save your
-                                favorites to build your custom deck.</p>
-                            <a href="https://xandrineshu.github.io/wdd330-finalproject/" target="_blank"
-                                class="project-link">view site
-                                ↗</a>
-                        </div>
-
-                        <div class="project-card">
-                            <h3 class="project-title">📂 Fear File</h3>
-                            <p class="project-desc">A digital archive and knowledge base where users can access
-                                information, lore, and
-                                guides on horror games.</p>
-                            <a href="https://xandrineshu.github.io/wdd231/finalproject/index.html" target="_blank"
-                                class="project-link">view
-                                site ↗</a>
-                        </div>
-
-                    </div>
-
-                    <%- include('partials/nav') %>
+    <!-- Portfolio Window -->
+    <div id="swup-container">
+        <div class="portfolio-window">
+            <!-- Retro Window Top Bar -->
+            <div class="title-bar">
+                <span>♡ Portfolio.exe - Safari</span>
+                <div class="window-buttons">
+                    <span></span><span></span><span></span>
                 </div>
             </div>
+    
+            <!-- Content Inside the Window -->
+            <div class="window-content">
+                <h1>my works.</h1>
+                <p class="tagline">featured digital creations & projects ༄.ೃ࿔📚*:･</p>
+    
+                <hr class="retro-divider">
+    
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+    
+                    <div class="project-card">
+                        <h3 class="project-title">🌊 cse340-course-app</h3>
+                        <p class="project-desc">A professional inventory and vehicle management web application
+                            featuring user accounts, classification views, and inventory database tracking.</p>
+                        <a href="https://cse340-6kte.onrender.com" target="_blank" class="project-link">view site
+                            ↗</a>
+                    </div>
+    
+                    <div class="project-card">
+                        <h3 class="project-title">🐱 Nekolist</h3>
+                        <p class="project-desc">An anime introductory website where beginners can learn what anime
+                            is and get a curated list of recommendations to start watching.</p>
+                        <a href="https://xandrineshu.github.io/wdd130/nekolist/index.html" target="_blank"
+                            class="project-link">view site ↗</a>
+                    </div>
+    
+                    <div class="project-card">
+                        <h3 class="project-title">🎶 Melodyhub</h3>
+                        <p class="project-desc">An informational website about music, exploring what music means and
+                            breaking down the various types of genres.</p>
+                        <a href="https://xandrineshu.github.io/wdd131/project/home.html" target="_blank"
+                            class="project-link">view site ↗</a>
+                    </div>
+    
+                    <div class="project-card">
+                        <h3 class="project-title">✨ Pokemon Strategist</h3>
+                        <p class="project-desc">A tool to search for any Pokémon card you wish, view their stats,
+                            and save your favorites to build your custom deck.</p>
+                        <a href="https://xandrineshu.github.io/wdd330-finalproject/" target="_blank"
+                            class="project-link">view site ↗</a>
+                    </div>
+    
+                    <div class="project-card">
+                        <h3 class="project-title">📂 Fear File</h3>
+                        <p class="project-desc">A digital archive and knowledge base where users can access
+                            information, lore, and guides on horror games.</p>
+                        <a href="https://xandrineshu.github.io/wdd231/finalproject/index.html" target="_blank"
+                            class="project-link">view site ↗</a>
+                    </div>
+    
+                </div>
+    
+                <%- include('partials/nav') %>
+            </div>
         </div>
-
+    </div>
+    
+    <!-- Retro Reset Desktop Button -->
+    <button id="reset-desktop-btn" title="Reset all windows & treats to default">🔄 Reset Desktop</button>
+    
+    <%- include('partials/modal') %>
 </body>
 
 </html>

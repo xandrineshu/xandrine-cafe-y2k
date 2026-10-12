@@ -1,4 +1,6 @@
-/* Y2K Aesthetic Stylesheet */
+/* ==========================================
+   1. GLOBAL VARIABLES & BODY
+   ========================================== */
 :root {
     --bg-pink: #fce4ec;
     --dot-color: #222222;
@@ -18,22 +20,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
-#cafe-menu-window {
-    position: fixed;
-    top: 150px;
-    left: 20px;
-    z-index: 1000;
-}
-
-/* Top Left Desktop Dock */
+/* ==========================================
+   2. DESKTOP DOCK & NAVIGATION BUTTONS
+   ========================================== */
 .desktop-dock {
     position: fixed;
     top: 15px;
     left: 20px;
-    /* Moved to top-left */
     display: flex;
     gap: 8px;
     z-index: 9999;
@@ -64,7 +60,13 @@ body {
     cursor: pointer;
 }
 
-/* Retro Mac OS Window Wrapper */
+/* ==========================================
+   3. UNIVERSAL PAGE WINDOWS & TITLE BAR
+   ========================================== */
+.home-window,
+.about-window,
+.portfolio-window,
+.guestbook-window,
 .retro-window {
     background: var(--window-bg);
     border: 2px solid var(--border-dark);
@@ -74,8 +76,11 @@ body {
     margin: auto;
 }
 
-/* Window Title Bar */
-.title-bar {
+.home-window .title-bar,
+.about-window .title-bar,
+.portfolio-window .title-bar,
+.guestbook-window .title-bar,
+.retro-window .title-bar {
     background: var(--border-dark);
     color: white;
     padding: 6px 12px;
@@ -84,6 +89,7 @@ body {
     align-items: center;
     font-size: 14px;
     font-weight: bold;
+    cursor: move;
 }
 
 .window-buttons span {
@@ -95,7 +101,9 @@ body {
     margin-left: 5px;
 }
 
-/* Window Content Area */
+/* ==========================================
+   4. WINDOW CONTENT & TYPOGRAPHY
+   ========================================== */
 .window-content {
     padding: 30px;
     text-align: center;
@@ -118,28 +126,77 @@ h1 {
     color: #555;
 }
 
-/* Y2K Chunky Button / Nav Links */
-.nav-links {
+.retro-divider {
+    border: 1px dashed #222;
+    margin: 20px 0;
+}
+
+/* ==========================================
+   5. GLOBAL RESET DESKTOP BUTTON
+   ========================================== */
+#reset-desktop-btn {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background: #ffecd2;
+    color: #111;
+    border: 2px solid #111;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #111;
+    z-index: 9999;
+    transition: transform 0.1s ease, background 0.1s ease;
+}
+
+#reset-desktop-btn:hover {
+    background: #ffb6c1;
+    transform: scale(1.05);
+}
+
+#reset-desktop-btn:active {
+    transform: translateY(2px);
+    box-shadow: 1px 1px 0px #111;
+}
+
+/* ==========================================
+   6. RETRO RESET CONFIRMATION MODAL
+   ========================================== */
+.retro-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 25px;
+    align-items: center;
+    z-index: 10000;
 }
 
-.nav-links a {
-    text-decoration: none;
-    background: white;
-    color: var(--border-dark);
-    border: 2px solid var(--border-dark);
-    padding: 8px 16px;
-    font-weight: bold;
-    box-shadow: 3px 3px 0px var(--border-dark);
-    transition: all 0.1s ease;
+.retro-modal-window {
+    background: var(--window-bg, #fff);
+    border: 2px solid var(--border-dark, #111);
+    box-shadow: 6px 6px 0px var(--border-dark, #111);
+    width: 350px;
+    max-width: 90vw;
 }
 
-.nav-links a:hover {
-    background: var(--border-dark);
+.retro-modal-window .title-bar {
+    background: var(--border-dark, #111);
     color: white;
-    transform: translate(-2px, -2px);
-    box-shadow: 5px 5px 0px var(--accent-pink);
+    padding: 6px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#modal-cancel-btn:hover {
+    color: #ff80ab !important;
 }
