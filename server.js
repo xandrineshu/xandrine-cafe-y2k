@@ -66,6 +66,21 @@ app.post('/guestbook', (req, res) => {
     res.redirect('/guestbook');
 });
 
+// 5. Catch-all 404 Route Handler
+app.use((req, res, next) => {
+    res.status(404).render('errors/404', {
+        title: `404 Not Found${TITLE_SUFFIX}`
+    });
+});
+
+// 6. General Server Error Handler (500)
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).render('errors/404', { // You can create a 500.ejs or reuse 404 styled for server errors
+        title: `System Error${TITLE_SUFFIX}`
+    });
+});
+
 const PORT = 3007;
 app.listen(PORT, () => {
     console.log(`✨ Xandrine's Y2K Café is open at http://localhost:${PORT} (˶ᵔ ᵕ ᵔ˶) ‹𝟹`);

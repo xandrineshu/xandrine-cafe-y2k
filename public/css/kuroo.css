@@ -1,6 +1,15 @@
 /* ==========================================
    KUROO THE CAFE MASCOT - INDIVIDUAL GIFS
    ========================================== */
+.companion-title-bar {
+    background: #ff80ab;
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 #cat-companion-window {
     width: 320px !important;
@@ -28,6 +37,17 @@
     image-rendering: pixelated;
     transition: left 0s linear, top 0s linear;
 }
+
+#feed-cat-btn,
+#pet-cat-btn {
+    background-color: #fff;
+}
+
+#feed-cat-btn:hover,
+#pet-cat-btn:hover {
+    color: #111;
+}
+
 
 /* 2. ANIMATION STATES & GIF BINDINGS */
 .kuroo-idle {

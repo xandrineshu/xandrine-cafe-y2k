@@ -1,0 +1,141 @@
+/* Y2K Error Page Aesthetic */
+body.error-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7d6e0;
+    background-image: radial-gradient(#d6a2bc 1px, transparent 1px);
+    background-size: 20px 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Retro Window Container */
+.error-window {
+    width: 420px;
+    background: #ece9d8;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title Bar */
+.error-title-bar {
+    background: linear-gradient(90deg, #ff6b8b, #ff8da1);
+    color: #fff;
+    padding: 6px 10px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #000;
+}
+
+.error-window-buttons span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border: 1px solid #000;
+    margin-left: 4px;
+    text-align: center;
+    font-size: 9px;
+    line-height: 10px;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Window Content */
+.error-content {
+    text-align: center;
+    padding: 30px 20px;
+    background: #fff;
+    margin: 6px;
+    border: 1px solid #7f7f7f;
+}
+
+.error-icon {
+    font-size: 2.8rem;
+    margin-bottom: 12px;
+}
+
+.error-title {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.error-message {
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+/* Retro Action Button */
+.error-btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 18px;
+    font-size: 0.8rem;
+    background: #fff;
+    color: #333;
+    border: 2px solid #333;
+    font-weight: bold;
+    box-shadow: 2px 2px 0px #333;
+    transition: all 0.1s ease;
+}
+
+.error-btn:hover {
+    background: #ff8da1;
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0px #333;
+}
+
+.error-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px #333;
+}
+
+/* Secret Easter Egg Layer */
+.secret-easter-egg {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    /* Allows dragging right over it smoothly */
+    z-index: 1;
+}
+
+.secret-easter-egg img {
+    max-width: 200px;
+    height: auto;
+    border: 2px dashed #ff8da1;
+    padding: 6px;
+    background: #fff;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    transform: rotate(-3deg);
+}
+
+.secret-text {
+    margin-top: 8px;
+    font-size: 0.75rem;
+    color: #b05a74;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2px 6px;
+    border: 1px solid #d6a2bc;
+}
+
+/* Ensure error window sits above the secret layer */
+.error-window {
+    position: relative;
+    z-index: 10;
+}

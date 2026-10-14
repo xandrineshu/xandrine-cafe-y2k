@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %>
+
+    <body class="error-body">
+
+        <!-- Secret Easter Egg Hidden Behind the Window -->
+        <div class="secret-easter-egg">
+            <img src="/images/kuroo-gif.gif" alt="Secret Easter Egg" />
+            <p class="secret-text"> Boo! </p>
+        </div>
+
+        <!-- Retro Error Window (Draggable via drag.js) -->
+        <div class="error-window" id="error-window">
+            <div class="error-title-bar">
+                <span>⚠️ error_404.exe - System Warning</span>
+                <div class="error-window-buttons">
+                    <span>_</span><span>□</span><span>×</span>
+                </div>
+            </div>
+
+            <div class="error-content">
+                <div class="error-icon">😿🔌</div>
+                <h2 class="error-title">Oops! Page Not Found</h2>
+
+                <p class="error-message">
+                    Looks like Kuroo knocked this URL off the desk, 
+                    or it doesn't exist in the cafe database! ✨
+                </p>
+
+                <a href="/" class="error-btn">
+                    Return to Desktop 🖥️
+                </a>
+            </div>
+        </div>
+
+    </body>
+
+</html>
