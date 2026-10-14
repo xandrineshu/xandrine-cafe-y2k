@@ -51,7 +51,8 @@
    ========================================== */
 .player-controls {
     display: flex;
-    gap: 6px;
+    gap: 10px;
+    margin: 0 auto;
 }
 
 .retro-btn-sm {
@@ -63,6 +64,11 @@
     padding: 4px 8px;
     cursor: pointer;
     flex: 1;
+}
+
+.retro-btn-sm:hover {
+    background: #ff80ab;
+    transform: scale(1.05);
 }
 
 .retro-btn-sm:active {

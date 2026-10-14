@@ -79,6 +79,11 @@
     box-shadow: 1px 1px 0px #111;
 }
 
+.active-treat-btn:hover {
+    color: #111;
+    background-color: #fff;
+}
+
 /* ==========================================
    3. CAROUSEL PREVIEW DISPLAY
    ========================================== */

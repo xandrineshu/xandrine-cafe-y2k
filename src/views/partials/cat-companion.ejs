@@ -1,6 +1,7 @@
-<div class="cat-window">
+<div id="cat-companion-window" class="retro-window"
+    style="display: none; width: 320px; min-width: 320px; box-sizing: border-box; position: fixed; top: 150px; left: 150px;">
     <div class="title-bar">
-        <span>🐾 Kuroo.exe - Companion</span>
+        <span>🐾 kuroo.exe - Companion</span>
         <div class="window-buttons">
             <span class="close-btn" data-target="cat-companion-window" style="cursor: pointer;" title="Close"></span>
             <span></span>
@@ -8,22 +9,14 @@
         </div>
     </div>
     
-    <div class="window-content" style="text-align: center; padding: 20px;">
-        <div
-            style="border: 2px solid #111; background: #fff; padding: 15px; display: inline-block; box-shadow: 3px 3px 0px #111;">
-            <div id="kuroo-sprite" style="font-size: 3rem; cursor: pointer; user-select: none;" title="Click Kuroo!">
-                🐈‍⬛</div>
-        </div>
-
-        <p class="cat-status" style="font-size: 0.85rem; margin-top: 12px; font-weight: bold; color: #333;">
-            "Kuroo is napping near the espresso machine... 💤"
+    <div class="window-content" style="text-align: center; padding: 20px; box-sizing: border-box;">
+        <p id="cat-status"
+            style="font-size: 0.85rem; font-weight: bold; color: #333; margin-top: 0; word-wrap: break-word;">
+            "Kuroo is napping... 💤"
         </p>
-
         <div style="display: flex; justify-content: center; gap: 8px; margin-top: 15px;">
-            <button id="feed-cat-btn" class="retro-btn" style="font-size: 0.75rem; padding: 4px 8px;">Feed Treat
-                🐟</button>
-            <button id="pet-cat-btn" class="retro-btn" style="font-size: 0.75rem; padding: 4px 8px;">Pet Kuroo
-                ✨</button>
+            <button id="feed-cat-btn" class="retro-btn" style="font-size: 0.75rem;">Feed Treat 🐟</button>
+            <button id="pet-cat-btn" class="retro-btn" style="font-size: 0.75rem;">Pet Kuroo ✨</button>
         </div>
     </div>
 </div>

@@ -1,34 +1,82 @@
 /* ==========================================
-   KUROO THE CAT COMPANION WINDOW
+   KUROO THE CAFE MASCOT - INDIVIDUAL GIFS
    ========================================== */
-.cat-window {
-    background: var(--window-bg, #fff);
-    border: 2px solid var(--border-dark, #111);
-    box-shadow: 6px 6px 0px var(--border-dark, #111);
-    width: 320px;
-    max-width: 90vw;
-    position: fixed;
-    top: 100px;
-    right: 50px;
-    z-index: 1000;
-}
 
-.cat-window .title-bar {
-    background: var(--border-dark, #111);
-    color: white;
-    padding: 6px 12px;
+#cat-companion-window {
+    width: 320px !important;
+    min-width: 320px !important;
+    max-width: 320px !important;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: move;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
-#kuroo-sprite {
-    transition: transform 0.15s ease;
+#cat-companion-window .window-content {
+    box-sizing: border-box;
+    width: 100%;
 }
 
-#kuroo-sprite:active {
-    transform: scale(0.9);
+#kuroo-mascot {
+    position: fixed;
+    z-index: 9998;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    image-rendering: pixelated;
+    transition: left 0s linear, top 0s linear;
+}
+
+/* 2. ANIMATION STATES & GIF BINDINGS */
+.kuroo-idle {
+    background-image: url('/images/kuroo-animations/idle.gif');
+}
+
+.kuroo-sit {
+    background-image: url('/images/kuroo-animations/sit-kuroo.gif');
+}
+
+.kuroo-walking-left {
+    background-image: url('/images/kuroo-animations/run.gif');
+}
+
+.kuroo-walking-right {
+    background-image: url('/images/kuroo-animations/run.gif');
+    transform: scaleX(-1);
+    /* Flip horizontally when walking right */
+}
+
+.kuroo-sleeping {
+    background-image: url('/images/kuroo-animations/sleep-kuroo.gif');
+}
+
+.kuroo-eating {
+    background-image: url('/images/kuroo-animations/eat-kuroo.gif');
+}
+
+.kuroo-meowing {
+    background-image: url('/images/kuroo-animations/meow-kuroo.gif');
+}
+
+/* Floating Reaction Emojis */
+.kuroo-reaction {
+    position: fixed;
+    font-size: 1.2rem;
+    pointer-events: none;
+    z-index: 9999;
+    animation: floatUpAndFade 1.2s ease-out forwards;
+}
+
+@keyframes floatUpAndFade {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(0.8);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-40px) scale(1.2);
+    }
 }
