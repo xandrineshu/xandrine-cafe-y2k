@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function setKurooAnimation(className) {
         if (!kurooMascot) return;
         kurooMascot.classList.remove(
-            'kuroo-idle', 'kuroo-sit', 'kuroo-walking-left',
-            'kuroo-walking-right', 'kuroo-sleeping', 'kuroo-eating', 'kuroo-meowing'
+            'idle', 'sit', 'walking-left',
+            'walking-right', 'sleeping', 'eating', 'meowing'
         );
         kurooMascot.classList.add(className);
     }
@@ -66,13 +66,13 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('cat-companion-window', 'true');
             if (window.bringToFront) window.bringToFront(catInteractionModal);
 
-            setKurooAnimation('kuroo-meowing');
+            setKurooAnimation('meowing');
             showKurooReaction('🐾');
 
             if (kurooState === 'sleeping') {
                 catStatus.textContent = '"Kuroo was sleeping, but you woke him up! ꜀( ꜆-ࡇ-)꜆ ᶻ 𝗓 𐰁"';
             } else {
-                catStatus.textContent = '"Kuroo meows back at you! (˵◝⩊◜˵マ"';
+                catStatus.textContent = '"Kuroo meows back at you! (˵◝⩊◜˵마"';
             }
         });
 
@@ -87,14 +87,14 @@ document.addEventListener('DOMContentLoaded', () => {
             feedBtn.onclick = () => {
                 if (!isKurooVisible()) return;
                 kurooState = 'eating';
-                setKurooAnimation('kuroo-eating');
+                setKurooAnimation('eating');
                 showKurooReaction('🐟');
                 catStatus.textContent = `"Nom nom nom! Kuroo loves the treat! ᓚ₍^..^₎♡"`;
 
                 setTimeout(() => {
                     if (kurooState === 'eating') {
                         kurooState = 'idle';
-                        setKurooAnimation('kuroo-idle');
+                        setKurooAnimation('idle');
                     }
                 }, 3000);
             };
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             petBtn.onclick = () => {
                 if (!isKurooVisible()) return;
                 const randomMsg = kurooQuotes[Math.floor(Math.random() * kurooQuotes.length)];
-                setKurooAnimation('kuroo-sit');
+                setKurooAnimation('sit');
                 showKurooReaction('💕');
                 catStatus.textContent = `"${randomMsg}"`;
             };
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isKurooVisible()) return;
             isDraggingCat = true;
             kurooState = 'beingDrag';
-            setKurooAnimation('kuroo-idle');
+            setKurooAnimation('idle');
             showKurooReaction('✨');
             clearInterval(kurooWanderInterval);
 
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isDraggingCat) {
                 isDraggingCat = false;
                 kurooState = 'idle';
-                setKurooAnimation('kuroo-idle');
+                setKurooAnimation('idle');
                 startKurooRoaming();
             }
         });
@@ -169,11 +169,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (actionRoll < 0.3) {
                     kurooState = 'sleeping';
-                    setKurooAnimation('kuroo-sleeping');
+                    setKurooAnimation('sleeping');
                     showKurooReaction('💤');
                 } else if (actionRoll < 0.6) {
                     kurooState = 'idle';
-                    setKurooAnimation('kuroo-sit');
+                    setKurooAnimation('sit');
                 } else {
                     roamToRandomLocation();
                 }
@@ -194,9 +194,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const currentX = parseFloat(kurooMascot.style.left) || window.innerWidth / 2;
 
             if (randomX < currentX) {
-                setKurooAnimation('kuroo-walking-left');
+                setKurooAnimation('walking-left');
             } else {
-                setKurooAnimation('kuroo-walking-right');
+                setKurooAnimation('walking-right');
             }
 
             kurooMascot.style.left = randomX + 'px';
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 if (kurooState === 'walking') {
                     kurooState = 'idle';
-                    setKurooAnimation('kuroo-idle');
+                    setKurooAnimation('idle');
                 }
             }, walkDuration);
         }
