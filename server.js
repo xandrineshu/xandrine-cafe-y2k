@@ -81,7 +81,7 @@ app.use((err, req, res, next) => {
     });
 });
 
-const PORT = 3007;
+const PORT = process.env.PORT || 3007;
 app.listen(PORT, () => {
     console.log(`✨ Xandrine's Y2K Café is open at http://localhost:${PORT} (˶ᵔ ᵕ ᵔ˶) ‹𝟹`);
 });
